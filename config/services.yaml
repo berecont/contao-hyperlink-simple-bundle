@@ -1,0 +1,18 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+  Berecont\ContaoHyperlinkSimpleBundle\:
+    resource: ../src
+
+  Berecont\ContaoHyperlinkSimpleBundle\Service\AttributePolicy:
+    arguments:
+      $allowData: '%berecont_hx.allow_data%'
+      $allowAria: '%berecont_hx.allow_aria%'
+      $allowedNames: '%berecont_hx.allowed_attribute_names%'
+      $allowedPatterns: '%berecont_hx.allowed_attribute_patterns%'  
+    
+  Berecont\ContaoHyperlinkSimpleBundle\Controller\ContentElement\HyperlinkSimpleController:
+    tags:
+      - { name: contao.content_element, category: 'links', type: 'hyperlinksimple', template: 'content_element/hyperlinksimple' }

@@ -1,0 +1,32 @@
+{
+    "name": "berecont/contao-hyperlink-simple-bundle",
+    "description": "Hyperlink simple bundle for Contao CMS.",
+    "license": "MIT",
+    "version": "1.0.0",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "Bernhard Renner",
+            "email": "info@berecont.at",
+            "homepage": "https://berecont.at",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "info@berecont.at"
+    },
+    "require": {
+        "php": "^8.3",
+        "contao/manager-bundle": "^5.3",
+        "contao/core-bundle": "^5.3",
+        "mvo/contao-group-widget": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Berecont\\ContaoHyperlinkSimpleBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Berecont\\ContaoHyperlinkSimpleBundle\\ContaoManager\\Plugin"
+    }
+}
